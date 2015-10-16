@@ -3,4 +3,4 @@ A repository to contribute on a Open Source version of the (un)popular LaserWork
 
 ---
 
-**WARNING:** The RDCAM software is property of `Shenzhen Reader Technology Co., Ltd.`, I publish some of their software here and I reverse engineer their software, but I'm not copying any code from they. The GPLv2 part will be made from scrath.
+**WARNING:** The RDCAM software is property of `Shenzhen Reader Technology Co., Ltd.`, I publish some of their software here and I reverse engineer their software, but I'm not copying any code from they. The GPLv2 part will be made from scratch.
