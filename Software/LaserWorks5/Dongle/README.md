@@ -3,7 +3,7 @@ Activating RDCAM
 
 > Do you recognize this screenshot? It means that you're trying to start the program for the first time and you don't have a board or your system doesn't recognize it.
 
-![Please link machine][1]
+> ![Please link machine][1]
 
 > RDCAM should activate automagically when detects the board. However, if you're willing to contribute on this project and you don't have such board, you can do this trick to activate the program. This recipe is valid for Windows and Unix/**Linux**.
 
