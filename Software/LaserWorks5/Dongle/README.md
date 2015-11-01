@@ -22,21 +22,21 @@ Activating RDCAM
    You can find the activation file on this folder. Simply copy it to your `%AppData%` folder. Now the program should open up correctly.
 
 
- Why it works?
- =============
-   It isn't a `dll` file. It's only a raw binary.
+Why it works?
+=============
+It isn't a `dll` file. It's only a raw binary.
 
-   Here you're a python version of the activation checking routine:
+Here you're a python version of the activation checking routine:
 
-        import os
+     import os
 
-        size_in_bytes = os.path.getsize(os.getenv('APPDATA') + 'r5.dll')
+     size_in_bytes = os.path.getsize(os.getenv('APPDATA') + 'r5.dll')
 
-        if size_in_bytes is not 10:
-            print("Please link machine")
-        else:
-            print("The activation file is a good one!")
+     if size_in_bytes is not 10:
+         print("Please link machine")
+     else:
+         print("The activation file is a good one!")
 
-  So any file with a length of 10 bytes is a valid activation dll.
+So any file with a length of 10 bytes is a valid activation dll.
 
- [1]: https://cloud.githubusercontent.com/assets/11387611/10869358/dbd3234a-80ad-11e5-9668-0386d3759eb6.png
+[1]: https://cloud.githubusercontent.com/assets/11387611/10869358/dbd3234a-80ad-11e5-9668-0386d3759eb6.png
