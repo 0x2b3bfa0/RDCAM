@@ -28,14 +28,14 @@ Activating RDCAM
 
    Here you're a python version of the activation checking routine:
 
-    import os
+        import os
 
-    size_in_bytes = os.path.getsize(os.getenv('APPDATA') + 'r5.dll')
+        size_in_bytes = os.path.getsize(os.getenv('APPDATA') + 'r5.dll')
 
-    If size_in_bytes is not 10:
-        print("Please link machine")
-    Else:
-        print("The activation file is a good one!")
+        if size_in_bytes is not 10:
+            print("Please link machine")
+        else:
+            print("The activation file is a good one!")
 
   So any file with a length of 10 bytes is a valid activation dll.
 
