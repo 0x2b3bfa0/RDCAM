@@ -12,3 +12,9 @@ I'll detail the structure of this folder:
         │       └── Extracted				The extracted files from the setup
         ├── RDPlug				The plugin for Corel/AI/AutoCAD (I plan to make it work with Inkscape)
         └── README.md				This file
+
+### Passwords:
+* Software: `RD8888` or `GXFC88`
+* Board:
+ * Set factory parameters: `HF8888`
+ * Get factory parameters: `CC8888` or `GXFC88`
