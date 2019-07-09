@@ -1,10 +1,10 @@
 [![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 
-**This repository is outdated, and I'm no longer focused on this project. This is here only for "historical" purposes. The most updated information (AFAIK) that you can find online is [here](http://stefan.schuermans.info/rdcam/rdlc320a.html).**
+**The most updated information that you can find online is probably [here](http://stefan.schuermans.info/rdcam/rdlc320a.html).**
 
 # RDCAM
-A repository to contribute on a Open Source version of the (un)popular LaserWorks RDCAM (from Shenzhen Reader Technology Co., Ltd.). Also I plan to reverse engineer the board (RDLC-320-A)
+An attempt to legally reverse-engineer the unpopular LaserWorks software from Shenzhen Reader Technology Co., Ltd.
 
 ---
 
-**WARNING:** The RDCAM software is property of `Shenzhen Reader Technology Co., Ltd.`, I publish some of their software here and I reverse engineer their software, but I'm not copying any code from they. The GPLv2 part will be made from scratch.
+**Note:** The original RDCAM/LaserWorks software is property of `Shenzhen Reader Technology Co., Ltd.`
