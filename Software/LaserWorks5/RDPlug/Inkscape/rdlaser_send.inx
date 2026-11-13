@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <name>Send to LaserWorks V5</name>
+  <id>org.rdcam.laserworks5.send</id>
+  <dependency type="file" location="inx">rdlaser_geometry.py</dependency>
+  <param name="tab" type="notebook">
+    <page name="send" gui-text="Send">
+      <param name="scope" type="optiongroup" appearance="combo" gui-text="Scope:"
+             gui-description="What to send. 'Automatic' sends the selection, or the whole drawing when nothing is selected.">
+        <option value="auto">Automatic</option>
+        <option value="selection">Selection only</option>
+        <option value="all">Whole drawing</option>
+      </param>
+      <param name="bitmaps" type="bool" gui-text="Send bitmaps (as grayscale images)">true</param>
+      <param name="bitmap_dpi" type="float" min="0" max="2400" precision="0" gui-text="Image resolution (dpi):"
+             gui-description="Resolution for images. 0 keeps each image's own resolution.">0</param>
+      <param name="raster_dpi" type="float" min="10" max="2400" precision="0" gui-text="Gradient/mask resolution (dpi):"
+             gui-description="Resolution used to render gradients, patterns and masked objects to bitmaps.">300</param>
+      <param name="launch" type="bool" gui-text="Start LaserWorks after exporting"
+             gui-description="If LaserWorks is already open, it reloads the new drawing.">true</param>
+      <spacer/>
+      <label appearance="header">How colours work</label>
+      <label>Solid colours are sent as outlines. The stroke colour, or the fill colour for objects without a stroke (text, for example), sets the LaserWorks layer.</label>
+      <label>Gradients, patterns and masked objects are sent as grayscale bitmaps. Clipped objects are cut to their visible part.</label>
+    </page>
+    <page name="setup" gui-text="Setup">
+      <param name="exe" type="path" mode="file" filetypes="exe" gui-text="LaserWorkV5.exe:"
+             gui-description="LaserWorks V5 program file. Its 'temp' folder is used to pass the drawing."></param>
+      <label appearance="header">macOS and Linux</label>
+      <param name="wine" type="string" gui-text="Wine command:"
+             gui-description="Command that runs Windows programs, for example 'wine' or the full path to it.">wine</param>
+      <param name="wineprefix" type="string" gui-text="Wine prefix (optional):"
+             gui-description="WINEPREFIX for LaserWorks. Leave empty for the default (~/.wine)."></param>
+    </page>
+    <page name="about" gui-text="About">
+      <label>Inkscape port of the RLaserV5 CorelDRAW macro that comes with RDCAM LaserWorks V5.</label>
+      <label>It writes rd.ai, dest.tmp, dest2.tmp and numbered .bmp files to the LaserWorks 'temp' folder, then starts LaserWorkV5.exe, which loads them.</label>
+    </page>
+  </param>
+  <effect needs-live-preview="false">
+    <object-type>all</object-type>
+    <effects-menu>
+      <submenu name="Laser (RDCAM)"/>
+    </effects-menu>
+    <menu-tip>Send the drawing to RDCAM LaserWorks V5</menu-tip>
+  </effect>
+  <script>
+    <command location="inx" interpreter="python">rdlaser_send.py</command>
+  </script>
+</inkscape-extension>

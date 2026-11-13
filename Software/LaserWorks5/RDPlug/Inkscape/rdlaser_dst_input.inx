@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <name>Tajima embroidery (*.dst) input</name>
+  <id>org.rdcam.laserworks5.input.dst</id>
+  <dependency type="file" location="inx">rdlaser_embroidery.py</dependency>
+  <input>
+    <extension>.dst</extension>
+    <mimetype>image/x-dst</mimetype>
+    <filetypename>Tajima embroidery (*.dst)</filetypename>
+    <filetypetooltip>Import DST stitch data as outlines (replaces the LaserWorks CorelDRAW "Import Dst/Dsb Data" button)</filetypetooltip>
+  </input>
+  <script>
+    <command location="inx" interpreter="python">rdlaser_embroidery.py</command>
+  </script>
+</inkscape-extension>
